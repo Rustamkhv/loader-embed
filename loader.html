@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Loader Animation</title>
+  <style>
+    body {
+      background: #18122B;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .loader-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .loader-letter {
+      font-size: 2rem;
+      color: #fff;
+      font-family: inherit;
+      opacity: 0.8;
+      letter-spacing: 2px;
+      animation: fadeletters 2s infinite alternate;
+    }
+    @keyframes fadeletters {
+      0% { opacity: 0.5; }
+      100% { opacity: 1; }
+    }
+    .loader {
+      width: 32px;
+      height: 32px;
+      border: 4px solid #fff;
+      border-bottom: 4px solid #635985;
+      border-radius: 50%;
+      animation: rotation 1s linear infinite;
+      margin-left: 12px;
+    }
+    @keyframes rotation {
+      0% { transform: rotate(0deg);}
+      100% { transform: rotate(360deg);}
+    }
+  </style>
+</head>
+<body>
+  <div class="loader-wrapper">
+    <span class="loader-letter">G</span>
+    <span class="loader-letter">e</span>
+    <span class="loader-letter">n</span>
+    <span class="loader-letter">e</span>
+    <span class="loader-letter">r</span>
+    <span class="loader-letter">a</span>
+    <span class="loader-letter">t</span>
+    <span class="loader-letter">i</span>
+    <span class="loader-letter">n</span>
+    <span class="loader-letter">g</span>
+    <div class="loader"></div>
+  </div>
+</body>
+</html>
